@@ -1,0 +1,12 @@
+def palindrome(list_1):
+        checked = []
+        for a in list_1:
+            if isinstance(a, str):
+                if a==a[::-1]:
+                    checked.append(a)
+        if checked:
+            print(f'{len(checked)} number of Palindrome are found.The following are Palindrome')
+            for i in checked:
+                print(i)
+        else:
+            print('Palindrome not found!')
