@@ -1,0 +1,24 @@
+#  Initialize the guess variable to 0
+guess = 0
+
+# Loop until the user correctly guesses the random number
+while guess != to_be_guessed:
+    
+#   Prompt the user to guess a number    
+    guess = int(input('Guess a number'))
+    
+    #  Check if the guessed number is positive and Greater than Zero
+    if guess > 0:
+        
+        # Compare the guessed number with the generated random number
+        if guess > to_be_guessed:
+            print('Number is to large')
+        elif guess < to_be_guessed:
+            print('Number is to small')
+            
+    # If the guessed number is not positive (i.e., it's negative or zero), it's considered giving up
+    else:
+        print('Sorry negative integer and Zero are not allowed')
+else:
+    # If the guessed number matches the random number, the loop ends, and the user is congratulated
+    print('Congratulation. You guessed right!')
